@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таро — расклад</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Таро</h1>
+        <p class="subtitle">символы для размышления, а не приговор</p>
+
+        <div class="panel">
+            <label for="question">Твой вопрос</label>
+            <input type="text" id="question" placeholder="Например: стоит ли мне принять это предложение?">
+            <div class="spreads">
+                <button class="spread-btn" data-spread="3">3 карты</button>
+                <button class="spread-btn active" data-spread="5">5 карт</button>
+                <button class="spread-btn" data-spread="paths">Два пути</button>
+            </div>
+            <button class="draw-btn" id="draw">Разложить</button>
+            <div class="controls">
+                <button class="ghost-btn" id="flipAll">Открыть все</button>
+                <button class="ghost-btn" id="reset">Сбросить</button>
+            </div>
+        </div>
+
+        <div class="spread-grid" id="grid">
+            <div class="empty" style="grid-column: 1 / -1;">
+                <span class="deco">☾</span>
+                Задай вопрос и нажми «Разложить».<br>
+                Карты откроются по одной — или сразу, если нажмёшь «Открыть все».
+            </div>
+        </div>
+
+        <div class="summary" id="summary"></div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
